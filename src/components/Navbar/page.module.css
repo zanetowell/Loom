@@ -1,0 +1,26 @@
+.container {
+    height:100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 200px;
+    width: 500px;
+    object-fit: cover;
+    transform: translateX(-100px);
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    gap: 25px;
+}
+
+.link:hover {
+    transition: .2s;
+    scale: 1.1;
+    color: rgb(240, 150, 95);
+}
