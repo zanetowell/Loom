@@ -1,0 +1,58 @@
+.container {
+
+}
+
+.mainTitle {
+    font-size: 58px;
+    color: rgb(240, 148, 93);
+}
+
+.title {
+    margin-top: 25px;
+    font-size: 42px;
+}
+
+.artist {
+    display: flex;
+    gap: 50px;
+    margin: 50px auto 75px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.artist:nth-child(2n+1) {
+    flex-direction:row-reverse;
+    background-color: #f0e4d3;
+}
+
+.info {
+    cursor: pointer;
+}
+
+.name {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.name:hover {
+    color: rgb(240, 148, 93);
+}
+
+.bio {
+    font-weight: 300;
+    font-size: 20px;
+    width: 75%;
+}
+
+.imgContainer {
+    height: 300px;
+    width: 500px;
+    position: relative;
+    cursor: pointer;
+}
+
+.img {
+    object-fit: cover;
+    border-radius: 10px;
+}
