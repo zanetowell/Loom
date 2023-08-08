@@ -4,7 +4,7 @@ import styles from './page.module.css'
 const layout = ({children}) => {
   return (
     <div>
-        <h1 className={styles.mainTitle}>Our Creators</h1>
+        <h1 className={styles.mainTitle}>Get to know us!</h1>
         {children}
     </div>
   )

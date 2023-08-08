@@ -7,7 +7,6 @@ const Artists = () => {
   const data = artistsList
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Get to know us!</h1>
       {data.map(item=>(
         <div className={styles.artist} key={item.id}>
           <div className={styles.info}>

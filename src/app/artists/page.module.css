@@ -4,7 +4,7 @@
 
 .mainTitle {
     font-size: 58px;
-    color: rgb(240, 148, 93);
+    color: #f0945d;
 }
 
 .title {
@@ -19,11 +19,21 @@
     justify-content: center;
     align-items: center;
     border-radius: 10px;
+    transition: .3s ease;
+    padding: 10px 20px;
+}
+
+.artist:hover {
+    background-color: #ecd5b4;
 }
 
 .artist:nth-child(2n+1) {
     flex-direction:row-reverse;
     background-color: #f0e4d3;
+}
+
+.artist:nth-child(2n+1):hover {
+    background-color: #ecd5b4;
 }
 
 .info {
