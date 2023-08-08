@@ -19,12 +19,12 @@ const About = () => {
       </div>
       
       <div className={styles.textBlocks}>
-        <div className={styles.textItem}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi non, accusantium, fuga aperiam molestiae laboriosam reprehenderit repudiandae ex iste nesciunt veritatis odio dolorem? Nemo beatae in sit, molestiae nostrum voluptates rem! Iusto itaque velit maxime voluptatum adipisci ut modi. Excepturi?</div>
-        <div className={styles.textItem}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis iure tenetur facere. Nulla, illo, porro quos, pariatur itaque facilis dolorem velit voluptate maiores incidunt placeat? Reiciendis autem corporis porro blanditiis!
+        <div className={styles.textItem}>Loom was born out of a simple yet profound idea: to weave together a virtual tapestry where artists and creatives could showcase their work and cultivate meaningful connections. In an increasingly digital world, we recognized the need for a space that transcends boundaries and celebrates the diverse forms of artistic expression. With a deep-rooted passion for the arts, we set out to create a haven where imagination knows no limits.</div>
+        <div className={styles.textItem}>Whether you're a painter, a poet, a musician, a filmmaker, or any kind of creative soul, Loom invites you to be a part of our vibrant tapestry. Join us in celebrating the magic of artistic expression and weaving together stories that inspire, connect, and transform. 
         <br /> <br />
-        - Lorem ipsum dolor sit amet. <br />
-        - Lorem ipsum dolor sit amet consectetur. <br />
-        - Lorem ipsum dolor sit amet. <br />
+        - Showcase Your Art. <br />
+        - Connect and Collaborate. <br />
+        - Inspiring Events. <br />
         </div>
       </div>
     </div>

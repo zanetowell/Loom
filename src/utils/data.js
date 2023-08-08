@@ -67,3 +67,38 @@ export const navLinks = [
       ],
     },
   ]
+
+  export const projectsList = [
+    {
+      id: 1,
+      name: 'Mural Painting',
+      desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, esse.', 
+      pic: 'https://images.pexels.com/photos/1647121/pexels-photo-1647121.jpeg?auto=compress&cs=tinysrgb&w=800',
+      location: 'Atlanta, GA',
+      content: 'sample text'
+    },
+    {
+      id: 2,
+      name: 'Arts Camp',
+      desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, esse.',
+      pic: 'https://images.pexels.com/photos/8033964/pexels-photo-8033964.jpeg?auto=compress&cs=tinysrgb&w=800',
+      location: 'New York, NY',
+      content: 'sample text'
+    },
+    {
+      id: 3,
+      name: 'Emerge: A Celebration of Creative Visions',
+      desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, esse.',
+      pic: 'https://images.pexels.com/photos/700413/pexels-photo-700413.jpeg?auto=compress&cs=tinysrgb&w=800',
+      location: 'Seattle, WA',
+      content: 'sample text'
+    },
+    {
+      id: 4,
+      name: 'Meet and Greet',
+      desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, esse.',
+      pic: 'https://images.pexels.com/photos/5935180/pexels-photo-5935180.jpeg?auto=compress&cs=tinysrgb&w=800',
+      location: 'Austin, TX',
+      content: 'sample text'
+    },
+  ]
