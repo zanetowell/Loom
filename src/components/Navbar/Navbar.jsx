@@ -1,4 +1,4 @@
-"use client"
+
 
 import React from 'react'
 import Link from 'next/link'
@@ -7,16 +7,13 @@ import Image from 'next/image'
 import BrandName from 'public/BrandName.png'
 import DarkModeToggle from '../DarkModeToggle/DarkModeToggle'
 import { navLinks } from '@/utils/data.js'
+import { shrikhand } from '@/app/layout'
 
 const Navbar = () => {
   return (
     <div className={styles.container}>
         <Link href='/' className={styles.logo}>
-          <Image 
-            src={BrandName}
-            alt=''
-            className={styles.logo}
-          />
+          <p className={shrikhand.className}>Loom</p>
         </Link>
         <div className={styles.links}>
           <DarkModeToggle />

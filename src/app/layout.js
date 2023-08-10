@@ -1,10 +1,16 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Inter, Shrikhand } from 'next/font/google'
 import { ThemeProvider } from '@/context/ThemeContext'
 import Navbar from '@/components/Navbar/Navbar'
 import Footer from '@/components/Footer/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
+
+export const shrikhand = Shrikhand({
+  subsets: ['latin'],
+  weight: '400',
+  display: 'swap',
+})
 
 export const metadata = {
   title: 'Loom',

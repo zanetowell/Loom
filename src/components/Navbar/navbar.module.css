@@ -6,10 +6,8 @@
 }
 
 .logo {
-    height: 200px;
-    width: 500px;
-    object-fit: cover;
-    transform: translateX(-100px);
+    font-size: 40px;
+    color: #f0945d;
 }
 
 .links {
@@ -23,7 +21,7 @@
 .link:hover {
     transition: .2s;
     scale: 1.1;
-    color: rgb(240, 150, 95);
+    color: #f0965f;
 }
 
 .login {
