@@ -23,9 +23,9 @@
 
 .title {
     font-size: 72px;
-    background: linear-gradient(to bottom, #111, #D4955A);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    /* background: linear-gradient(to bottom, #D4955A,); */
+    /* -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
     text-align: center;
   }
 

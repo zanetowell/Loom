@@ -15,6 +15,7 @@
 .links {
     display: flex;
     align-items: center;
+    justify-content: center;
     font-size: 22px;
     gap: 25px;
 }
@@ -23,4 +24,8 @@
     transition: .2s;
     scale: 1.1;
     color: rgb(240, 150, 95);
+}
+
+.login {
+    cursor: pointer;
 }

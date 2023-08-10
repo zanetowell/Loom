@@ -1,15 +1,18 @@
-import React from 'react'
+"use client"
+import React, { useContext } from 'react'
 import styles from './page.module.css'
 import { projectsList } from '@/utils/data.js' 
+import { ThemeContext } from '@/context/ThemeContext'
 import Image from 'next/image'
 
 const Projects = () => {
   const data = projectsList 
+  const { mode } = useContext(ThemeContext)
   return (
     <div className={styles.container}>
       <div className={styles.itemList}>
         {data.map(item=>(
-          <div className={styles.item} key={item.id}>
+          <div className={mode === 'light' ? styles.item : styles.itemDM} key={item.id}>
             <div className={styles.imgContainer}>
             <Image 
               src={item.pic}
