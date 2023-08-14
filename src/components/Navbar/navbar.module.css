@@ -27,3 +27,9 @@
 .login {
     cursor: pointer;
 }
+
+.login:hover {
+    transition: .2s;
+    scale: 1.1;
+    color: #f0965f;
+}

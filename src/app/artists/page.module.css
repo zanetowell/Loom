@@ -4,7 +4,6 @@
 
 .mainTitle {
     font-size: 58px;
-    /* color: #f0945d; */
 }
 
 .artist {
@@ -16,6 +15,7 @@
     border-radius: 10px;
     transition: .3s ease;
     padding: 0 0 0 20px;
+    background-color: #f0e4d3;
 }
 
 .artist:hover {
@@ -30,11 +30,6 @@
 .artist:nth-child(2n+1) {
     flex-direction:row-reverse;
     padding: 0 20px 0 0;
-    background-color: #f0e4d3;
-}
-
-.artist:nth-child(2n+1):hover {
-    background-color: #ecd5b4;
 }
 
 .info {
@@ -75,6 +70,7 @@
     border-radius: 10px;
     transition: .3s ease;
     padding: 0 0 0 20px;
+    background-color: #282520;
 }
 
 .artistDM:hover {
@@ -89,9 +85,4 @@
 .artistDM:nth-child(2n+1) {
     flex-direction:row-reverse;
     padding: 0 20px 0 0;
-    background-color: #282520;
-}
-
-.artistDM:nth-child(2n+1):hover {
-    background-color: #4f4940;
 }

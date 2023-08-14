@@ -1,19 +1,19 @@
-
+"use client"
 
 import React from 'react'
 import Link from 'next/link'
 import styles from './navbar.module.css'
-import Image from 'next/image'
-import BrandName from 'public/BrandName.png'
 import DarkModeToggle from '../DarkModeToggle/DarkModeToggle'
 import { navLinks } from '@/utils/data.js'
-import { shrikhand } from '@/app/layout'
+// import { shrikhand } from '@/app/layout'
+import { signIn, useSession } from 'next-auth/react'
 
 const Navbar = () => {
+  const session = useSession()
   return (
     <div className={styles.container}>
         <Link href='/' className={styles.logo}>
-          <p className={shrikhand.className}>Loom</p>
+          <p>Loom</p>
         </Link>
         <div className={styles.links}>
           <DarkModeToggle />
@@ -22,7 +22,7 @@ const Navbar = () => {
                     {link.title}
                 </Link>
             ))}
-            <p className={styles.login}>Login</p>
+            <p className={styles.login} onClick={()=>signIn("google")}>Login</p>
         </div>
     </div>
   )

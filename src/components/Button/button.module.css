@@ -3,8 +3,15 @@
     padding: 20px;
     border: none;
     cursor: pointer;
-    background-color: rgb(240, 148, 93);
+    background-color: #f0945d;
     color: white;
     border-radius: 10px;
     width: max-content;
+    transition: all .3s;
+}
+
+.container:hover {
+    -webkit-box-shadow: 2px 4px 14px 0px rgba(0,0,0,0.66);
+    -moz-box-shadow: 2px 4px 14px 0px rgba(0,0,0,0.66);
+    box-shadow: 2px 4px 14px 0px rgba(0,0,0,0.66);
 }
