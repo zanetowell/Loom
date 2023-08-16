@@ -1,0 +1,41 @@
+.imgContainer {
+    width: 100%;
+    height: 300px;
+    position: relative;
+}
+
+.img {
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 4px 4px 4px 1px rgba(0, 0, 0, 0.25);
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.title {
+    font-size: 48px;
+}
+
+.location {
+    font-weight: 300;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.content {
+    font-weight: 300;
+    font-size: 22px;
+}
+
+.button {
+    box-shadow: 4px 4px 4px 1px rgba(0, 0, 0, 0.25);
+}

@@ -1,18 +1,32 @@
-"use client"
+
 import React, { useContext } from 'react'
 import styles from './page.module.css'
 import { projectsList } from '@/utils/data.js' 
 import { ThemeContext } from '@/context/ThemeContext'
 import Image from 'next/image'
+import Link from 'next/link'
 
-const Projects = () => {
-  const data = projectsList 
-  const { mode } = useContext(ThemeContext)
+async function getData() {
+  
+  const res = await fetch('http://localhost:3000/api/events', {
+    cache: "no-store",
+  })
+  if (!res.ok) {
+    throw new Error('Failed to fetch data')
+  }
+
+  return res.json()
+}
+
+const Projects = async () => {
+  const data = await getData() 
+  // const { mode } = useContext(ThemeContext)
+  // {mode === 'light' ? styles.item : styles.itemDM}
   return (
     <div className={styles.container}>
       <div className={styles.itemList}>
         {data.map(item=>(
-          <div className={mode === 'light' ? styles.item : styles.itemDM} key={item.id}>
+        <Link href={`/events/${item._id}`} className={styles.item} key={item.id}>
             <div className={styles.imgContainer}>
             <Image 
               src={item.pic}
@@ -26,7 +40,7 @@ const Projects = () => {
               <p className={styles.desc}>{item.desc}</p>
               <span className={styles.location}>{item.location}</span>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
