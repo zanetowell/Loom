@@ -3,6 +3,7 @@ import React from 'react'
 import styles from './page.module.css'
 import { notFound } from 'next/navigation'
 import Button from '@/components/Button/Button'
+import Link from 'next/link'
 
 async function getData(id) {
     const res = await fetch(`http://localhost:3000/api/events/${id}`, {
@@ -20,11 +21,15 @@ const EventPage = async ({ params }) => {
     const data = await getData(params.id)
   return (
   <div className={styles.container}>
+    <Link href='/events' className={styles.back}>
+      Back
+    </Link>
       <div className={styles.imgContainer}>
         <Image 
             src={data.pic}
             className={styles.img}
             fill={true}
+            alt='banner'
         />
       </div>
       <div className={styles.info}>

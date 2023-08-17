@@ -1,11 +1,13 @@
 "use client"
 
-import React from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
 import { Shrikhand } from 'next/font/google'
 import styles from './navbar.module.css'
 import DarkModeToggle from '../DarkModeToggle/DarkModeToggle'
 import { navLinks } from '@/utils/data.js'
+import { FaBars, FaTimes, FaGithub, FaLinkedin} from 'react-icons/fa'
+
 // import { signIn, useSession } from 'next-auth/react'
 
 export const shrikhand = Shrikhand({
@@ -15,7 +17,10 @@ export const shrikhand = Shrikhand({
 })
 
 const Navbar = () => {
-  // const session = useSession()
+
+  const [nav, setNav] = useState(false)
+  const handleClick = () => setNav(!nav)
+
   return (
     <div className={styles.container}>
         <Link href='/' className={styles.logo}>
@@ -28,6 +33,25 @@ const Navbar = () => {
                     {link.title}
                 </Link>
             ))}   
+        </div>
+
+        {/* Hamburger Icon */}
+        <div onClick={handleClick} className={styles.hamburger}>
+          {!nav ? <FaBars /> : <FaTimes />}
+        </div>
+
+        {/* Mobile Menu */}
+        <div className={!nav ? styles.mobilelinks : styles.showmobilelinks}>
+          <DarkModeToggle />
+            {navLinks.map(link=>(
+                <Link key={link.id} href={link.url} onClick={handleClick}>
+                    {link.title}
+                </Link>
+            ))}   
+            <div className={styles.devlinks}>
+              <Link href='https://github.com/zanetowell' target='_blank'><FaGithub/></Link>
+              <Link href='https://www.linkedin.com/in/zane-towell/' target='_blank'><FaLinkedin/></Link>
+            </div>
         </div>
     </div>
   )

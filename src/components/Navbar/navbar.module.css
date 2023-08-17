@@ -33,3 +33,45 @@
     scale: 1.1;
     color: #f0965f;
 }
+
+.hamburger {
+    display: none;
+}
+
+.mobilelinks {
+    display: none;
+}
+
+.showmobilelinks {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-size: 40px;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: #1c1b1b;
+    color: #f0945d;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+}
+
+.devlinks {
+    display: flex;
+    gap: 20px;
+}
+
+@media screen and (max-width: 860px) {
+
+    .links {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+        z-index: 100;
+    }
+}
