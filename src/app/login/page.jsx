@@ -20,7 +20,7 @@ const Login = () => {
 
   return (
     <div className={styles.container}>
-      <button onClick={()=>signIn("google")}>Login with Google</button>
+      <button onClick={()=>signIn("google")} className={styles.login}>Login with Google</button>
     </div>
   )
 }
