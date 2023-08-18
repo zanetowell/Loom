@@ -35,12 +35,12 @@ const EventPage = async ({ params }) => {
       <div className={styles.info}>
         <div className={styles.header}>
           <h1 className={styles.title}>{data.name}</h1>
-          <Button text="Sign Up" url='#'/>
         </div>
           <span className={styles.location}>{data.location}</span>
         <div>
           <p className={styles.content}>{data.content}</p>
         </div>
+          <Button text="Sign Up" url='#' className={styles.mobilebutton}/>
       </div>
   </div>
   )
