@@ -30,3 +30,16 @@
 .textItem {
     flex: 1;
 }
+
+@media screen and (max-width: 860px) {
+    .imgText {
+        width: 100%;
+        left: 0;
+        bottom: 0;
+    }
+
+    .textBlocks {
+        display: flex;
+        flex-direction: column;
+    }
+}
