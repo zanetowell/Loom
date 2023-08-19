@@ -40,7 +40,9 @@ const EventPage = async ({ params }) => {
         <div>
           <p className={styles.content}>{data.content}</p>
         </div>
-          <Button text="Sign Up" url='#' className={styles.mobilebutton}/>
+        <div className={styles.button}>
+          <Button text="Sign Up" url='#' className={styles.button}/>
+        </div>
       </div>
   </div>
   )

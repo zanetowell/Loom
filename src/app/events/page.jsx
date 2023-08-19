@@ -1,8 +1,6 @@
 
 import React, { useContext } from 'react'
 import styles from './page.module.css'
-import { projectsList } from '@/utils/data.js' 
-import { ThemeContext } from '@/context/ThemeContext'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -20,13 +18,12 @@ async function getData() {
 
 const Projects = async () => {
   const data = await getData() 
-  // const { mode } = useContext(ThemeContext)
-  // {mode === 'light' ? styles.item : styles.itemDM}
+
   return (
     <div className={styles.container}>
       <div className={styles.itemList}>
         {data.map(item=>(
-        <Link href={`/events/${item._id}`} className={styles.item} key={item.id}>
+        <Link href={`/events/${item._id}`} className={styles.item} key={item._id}>
             <div className={styles.imgContainer}>
             <Image 
               src={item.pic}

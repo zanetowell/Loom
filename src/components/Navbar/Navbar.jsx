@@ -7,8 +7,8 @@ import styles from './navbar.module.css'
 import DarkModeToggle from '../DarkModeToggle/DarkModeToggle'
 import { navLinks } from '@/utils/data.js'
 import { FaBars, FaTimes, FaGithub, FaLinkedin} from 'react-icons/fa'
+import { signOut, useSession } from 'next-auth/react'
 
-// import { signIn, useSession } from 'next-auth/react'
 
 export const shrikhand = Shrikhand({
   subsets: ['latin'],
@@ -17,7 +17,7 @@ export const shrikhand = Shrikhand({
 })
 
 const Navbar = () => {
-
+  const session = useSession()
   const [nav, setNav] = useState(false)
   const handleClick = () => setNav(!nav)
 
@@ -33,6 +33,18 @@ const Navbar = () => {
                     {link.title}
                 </Link>
             ))}   
+            {session.status === 'unauthenticated' && 
+            <Link href='/users/login' className={styles.link}>
+              Login
+            </Link>
+            }
+            {session.status === 'authenticated' && 
+            <p 
+              className={styles.link}
+              onClick={signOut}>
+                Logout
+            </p>
+            }
         </div>
 
         {/* Hamburger Icon */}

@@ -24,11 +24,6 @@ export const navLinks = [
       title: "Contact",
       url: "/contact",
     },
-    {
-      id: 6,
-      title: "Login",
-      url: "/login",
-    },
   ];
 
   export const artistsList = [

@@ -1,0 +1,44 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.input, .textArea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #f0945d;
+    outline: none;
+    border-radius: 3px;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.register {
+    font-size: 20px;
+    padding: 20px;
+    border: none;
+    cursor: pointer;
+    background-color: #f0945d;
+    color: white;
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+    transition: all .3s;
+}
+
+.register:hover {
+    -webkit-box-shadow: 2px 4px 14px 0px rgba(0,0,0,0.66);
+    -moz-box-shadow: 2px 4px 14px 0px rgba(0,0,0,0.66);
+    box-shadow: 2px 4px 14px 0px rgba(0,0,0,0.66);
+}
