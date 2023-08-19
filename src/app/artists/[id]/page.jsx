@@ -33,6 +33,7 @@ const ArtistPage = async ({ params }) => {
             src={data.pic}
             fill={true}
             className={styles.img}
+            alt='artist'
           />
         </div>
       </div>
