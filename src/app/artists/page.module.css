@@ -47,19 +47,19 @@
 .bio {
     font-weight: 300;
     font-size: 20px;
-    width: 75%;
+    width: 65%;
 }
 
 .imgContainer {
     height: 300px;
-    width: 500px;
+    width: 600px;
     position: relative;
     cursor: pointer;
 }
 
 .img {
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 8px;
 }
 
 

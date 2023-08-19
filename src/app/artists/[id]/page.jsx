@@ -1,10 +1,46 @@
+import Image from 'next/image'
 import React from 'react'
 import styles from './page.module.css'
+import { notFound } from 'next/navigation'
+import Button from '@/components/Button/Button'
+import Link from 'next/link'
 
-const CreatorPage = () => {
+async function getData(id) {
+    const res = await fetch(`http://localhost:3000/api/artists/${id}`, {
+      cache: "no-store",
+    })
+  
+    if (!res) {
+      notFound()
+    }
+  
+    return res.json()
+  }
+
+const ArtistPage = async ({ params }) => {
+    const data = await getData(params.id)
   return (
-    <div>CreatorPage</div>
+  <div className={styles.container}>
+    <Link href='/artists' className={styles.back}>
+      Back
+    </Link>
+      <div className={styles.artist}>
+        <div className={styles.info}>
+          <h2 className={styles.name}>{data.name}</h2>
+        </div>
+        <div className={styles.imgContainer}>
+          <Image 
+            src={data.pic}
+            fill={true}
+            className={styles.img}
+          />
+        </div>
+      </div>
+      <div className={styles.content}>
+        <p className={styles.bio}>{data.bio}</p>
+      </div>
+  </div>
   )
 }
 
-export default CreatorPage
+export default ArtistPage
