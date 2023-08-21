@@ -6,7 +6,7 @@ import Button from '@/components/Button/Button'
 import Link from 'next/link'
 
 async function getData(id) {
-    const res = await fetch(`https://loom-h5w1cfg8a-zanetowell.vercel.app/api/events/${id}`, {
+    const res = await fetch(`http://localhost:3000/api/events/${id}`, {
       cache: "no-store",
     })
   
