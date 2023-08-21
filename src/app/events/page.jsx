@@ -19,10 +19,10 @@ async function getData() {
 const Projects = async () => {
   const data = await getData() 
 
-  return (
-    <div className={styles.container}>
-      <div className={styles.itemList}>
-        {data.map(item=>(
+  const loaded =  () => {
+    return (
+      <>
+      {data.map(item=>(
         <Link href={`/events/${item._id}`} className={styles.item} key={item._id}>
             <div className={styles.imgContainer}>
             <Image 
@@ -39,6 +39,18 @@ const Projects = async () => {
             </div>
           </Link>
         ))}
+      </>
+    )
+  }
+
+  const loading = () => {
+    return <h1>Loading...</h1>;
+  };
+  
+  return (
+    <div className={styles.container}>
+      <div className={styles.itemList}>
+        {data ? loaded() : loading() }
       </div>
     </div>
   )
