@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 async function getData() {
   
-  const res = await fetch('http://localhost:3000/api/artists', {
+  const res = await fetch('https://loom-nine.vercel.app/api/artists', {
     cache: "no-store",
   })
   if (!res.ok) {

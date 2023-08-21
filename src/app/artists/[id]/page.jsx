@@ -6,7 +6,7 @@ import Button from '@/components/Button/Button'
 import Link from 'next/link'
 
 async function getData(id) {
-    const res = await fetch(`http://localhost:3000/api/artists/${id}`, {
+    const res = await fetch(`https://loom-nine.vercel.app/api/artists/${id}`, {
       cache: "no-store",
     })
   

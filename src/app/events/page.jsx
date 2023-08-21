@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 async function getData() {
   
-  const res = await fetch('http://localhost:3000/api/events', {
+  const res = await fetch('https://loom-nine.vercel.app/api/events', {
     cache: "no-store",
   })
   if (!res.ok) {
