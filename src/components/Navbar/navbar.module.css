@@ -74,5 +74,8 @@
     .hamburger {
         display: flex;
         z-index: 100;
+        gap: 20px;
+        font-size: x-large;
+        align-items: center;
     }
 }

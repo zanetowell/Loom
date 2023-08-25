@@ -22,7 +22,7 @@ const ArtistPage = async ({ params }) => {
   return (
   <div className={styles.container}>
     <Link href='/artists' className={styles.back}>
-      Back
+    Back
     </Link>
       <div className={styles.artist}>
         <div className={styles.info}>

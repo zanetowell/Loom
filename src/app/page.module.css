@@ -42,6 +42,10 @@
       display: none;
     }
 
+    .title {
+      font-size: 56px;
+    }
+
     .container {
       display: flex;
       flex-direction: column;
