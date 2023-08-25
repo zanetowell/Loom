@@ -1,3 +1,5 @@
+"use server"
+
 import { NextResponse } from "next/server"
 import connect from "@/utils/db"
 import Artist from "@/models/Artist"
