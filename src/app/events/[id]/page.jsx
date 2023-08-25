@@ -6,15 +6,15 @@ import Button from '@/components/Button/Button'
 import Link from 'next/link'
 
 async function getData(id) {
-    // const res = await fetch(`https://loom-nine.vercel.app/api/events/${id}`, {
-    //   cache: "no-store",
-    // })
+    const res = await fetch(`https://loom-nine.vercel.app/api/events/${id}`, {
+      cache: "no-store",
+    })
   
-    // if (!res) {
-    //   notFound()
-    // }
+    if (!res) {
+      notFound()
+    }
   
-    // return res.json()
+    return res.json()
   }
 
 const EventPage = async ({ params }) => {
