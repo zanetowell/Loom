@@ -60,6 +60,18 @@ const Navbar = () => {
                     {link.title}
                 </Link>
             ))}   
+            {session.status === 'unauthenticated' && 
+            <Link href='/users/login' className={styles.link}>
+              Login
+            </Link>
+            }
+            {session.status === 'authenticated' && 
+            <p 
+              className={styles.link}
+              onClick={signOut}>
+                Logout
+            </p>
+            }
             <div className={styles.devlinks}>
               <Link href='https://github.com/zanetowell' target='_blank'><FaGithub/></Link>
               <Link href='https://www.linkedin.com/in/zane-towell/' target='_blank'><FaLinkedin/></Link>
