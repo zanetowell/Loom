@@ -6,14 +6,14 @@ import Link from 'next/link'
 
 async function getData() {
   
-  const res = await fetch('https://loom-nine.vercel.app/api/artists', {
-    cache: "no-store",
-  })
-  if (!res.ok) {
-    throw new Error('Failed to fetch data')
-  }
+  // const res = await fetch('https://loom-nine.vercel.app/api/artists', {
+  //   cache: "no-store",
+  // })
+  // if (!res.ok) {
+  //   throw new Error('Failed to fetch data')
+  // }
 
-  return res.json()
+  // return res.json()
 }
 
 const Artists = async () => {
